@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Me</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="background">
+  <header>
+    <ul class="navbar">
+      <li><a href="index.html" target="_blank">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact-us.html">Contact Me</a></li>
+    </ul>
+    <div class="theme-switch">
+      <p class="mode-status">Currently in Light Mode</p>
+      <label class="toggle-switch">
+        <input type="checkbox" id="mode-toggle">
+        <span class="slider"></span>
+      </label>
+    </div>
+    <div class="header">
+      <h1>Contact Me</h1>
+    </div>
+  </header>
+
+
+  <!-- start of contact form -->
+  <main class="container main">
+    <div id="submitted-msg">Form successfully submitted!</div>
+    <form method="post" action="#" id="contactForm" novalidate>
+
+
+      <!-- FIRST NAME INPUT -->
+      <div class="input-box">
+        <label for="firstName" class="formlabel">First name </label>
+        <input type="text" id="firstName" name="firstName" class="formcontrol" minlength="3">
+        <small class="error-msg invalid-feedback">Required</small>
+      </div>
+
+
+      <!-- LAST NAME INPUT -->
+      <div class="input-box">
+        <label for="lastName" class="formlabel">Last name </label>
+        <input type="text" id="lastName" name="lastName" class="formcontrol" minlength="3">
+        <small class="error-msg invalid-feedback">Required</small>
+      </div>
+
+
+      <!-- EMAIL INPUT -->
+      <div class="input-box">
+        <label for="email" class="formlabel">Email </label>
+        <input type="email" id="email" name="email" class="formcontrol" required>
+        <small class="error-msg invalid-feedback">Required</small>
+      </div>
+
+
+      <!-- SUBMIT BUTTON -->
+      <div class="form-btns">
+        <button type="submit" class="btn btn-primary submit" disabled>SUBMIT</button>
+      </div>
+    </form>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>

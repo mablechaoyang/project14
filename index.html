@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mable's Personal Website</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <script src="https://kit.fontawesome.com/b01066b2fa.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+</head>
+
+<body class="background">
+  <header>
+    <ul class="navbar">
+      <li><a href="index.html" target="_blank">Home</a></li>
+      <li><a href="projects.html">Projects</a></li>
+      <li><a href="contact-me.html">Contact Me</a></li>
+    </ul>
+    <div class="theme-switch">
+      <p class="mode-status">Currently in Light Mode</p>
+      <label class="toggle-switch">
+        <input type="checkbox" id="mode-toggle">
+        <span class="slider"></span>
+      </label>
+    </div>
+    <div class="header">
+      <h1>Mable Chaoyang</h1>
+      <p>My Journey with Software Development</p>
+    </div>
+  </header>
+  <div class="image">
+    <img src="https://cdn.discordapp.com/attachments/1137535608764502128/1137535981885604010/IMG_2558.jpeg" alt="picture of mable" width=200px;>
+  </div>
+  
+    <div class="container">
+    <section class="item">
+      <h2>Intro</h2>
+      <p>Welcome to my website! I'll be sharing my experiences and other things that I have learned on my path to becoming a Software Developer.</p>
+    </section>
+    <section class="item left">
+      <div class="item__content">
+        <h2>About Me</h2>
+        <p>My name is Mable Chaoyang. I’m 23 years old born and raised in Sacramento, Ca. I spend most of my time working, and on my free time I like to spend time with my family. I’m a very simple person but also very motivated to find a new career I can thrive at. I’m currently working at Amazon and taking a Software Development program through Career Choice. The purpose of this website is to showcase how I’ve been doing in my journey to becoming a Software Developer. I’ve come into this field with no experience, but I’ve created this site to show my progression into this field.</p>
+      </div>
+    </section>
+    <section class="item right">
+      <div class="item__content">
+        <h2>My journey with Software Development</h2>
+        <p>I started my Software Development journey in July this year and so far I have learned many things! It's been very challenging, but with time and dedication so far I've managed to get through it. Some things I've learned so far include: </p>
+      <ul>
+       <li>HTML tags and elements</li>
+       <li>Forms, radios, checkbox, and buttons</li>
+       <li>External, internal, and inline CSS</li>
+       <li>Bootstrap</li>
+       <li>Javascript</li>
+       <li>Github</li><br>
+       And many more!!
+      </ul>
+      </div>
+    </section>
+  </div>
+  
+<!-- Leaflet map -->
+  <div id="map" style="width: 500px; height: 300px;"></div>
+  <script>
+    // Set map view
+    const map = L.map('map').setView([38.577119, -121.495789 ], 
+      14); //zoom
+    const tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+    // Marker
+    var marker = L.marker([38.576504,-121.493431]).addTo(map);
+    // Radius
+    var circle = L.circle([38.58, -121.50], {
+      radius: 400
+    }).addTo(map);
+    
+    //Popup 
+    marker.bindPopup("California State Capitol.").openPopup();
+    circle.bindPopup("Golden 1 Center<br><b>Home of the kings!<b>");
+    
+  </script>
+
+  <footer>
+    <div class="grid">
+      <div class="links">
+        <a href="https://www.linkedin.com/in/mable-chaoyang-6b7050286/" target="_blank">
+        <i class="fa-brands fa-linkedin fa-2xl"></i>
+        </a>
+      </div>
+      <div class="links">
+        <a href="https://codepen.io/mablechaoyang" target="_blank">
+        <i class="fa-brands fa-codepen fa-2xl"></i>      
+  </a>
+      </div>
+  </footer>
+  <script src="script.js"></script>
+</body>
+
+</html>
